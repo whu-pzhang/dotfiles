@@ -1,0 +1,10 @@
+[user]
+	name = whu-pzhang
+	email = pzhang@whu.edu.cn
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+[push]
+	default = simple
