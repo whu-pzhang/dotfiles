@@ -6,4 +6,3 @@ init:
 	ln -fs ${PWD}/vimrc ~/.vimrc
 	ln -fs ${PWD}/vim ~/.vim
 	ln -fs ${PWD}/fonts ~/.fonts
-	ln -s ~/sublime_text_3/sublime_text /usr/bin/sublime

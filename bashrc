@@ -27,7 +27,7 @@ export TAUPHOME=/opt/TauP-2.1.2
 export PATH=${TAUPHOME}/bin:${PATH}
 
 # GMT4
-export GMT4HOME=/opt/GMT4
+export GMT4HOME=/opt/GMT-4.5.14
 export PATH=${GMT4HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
@@ -36,7 +36,7 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 #export PATH=${GMT4HOME}/bin:${PATH}
 
 # GMT5
-export GMT5HOME=/opt/GMT5
+export GMT5HOME=/opt/GMT-5.2.1
 export PATH=${GMT5HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
 
@@ -46,12 +46,12 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # TeXLive 2015
-export PATH=/opt/texlive/2015/bin/x86_64-linux:${PATH}
-export INFOPATH=/opt/texlive/2015/texmf-dist/doc/info:${INFOPATH}
-export MANPATH=/opt/texlive/2015/texmf-dist/doc/man:${MANPATH}
+export PATH=/usr/local/texlive/2015/bin/x86_64-linux:${PATH}
+export INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info:${INFOPATH}
+export MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man:${MANPATH}
 
 # CPS
-export PATH=/usr/local/PROGRAMS.330/bin:${PATH}
+export PATH=/opt/PROGRAMS.330/bin:${PATH}
 
 # ZhuLP RF
 export RFSCRIPTS=${HOME}/RF/scripts
@@ -62,15 +62,21 @@ export PATH=${MY_BIN}:${PATH}
 export IASP91_TBL=${MY_BIN}/iasp91
 export NR=${HOME}/src.import/Numerical_Recipes
 export NR_BIN=${MY_BIN}
+# GCAP
+export PATH=${HOME}/Src/gcap:${PATH}
 
 # Matlab
 export PATH=/opt/matlab2009b/bin:${PATH}
 
 # CWP
-export CWPROOT=/opt/cwp
+export CWPROOT=$HOME/cwp
 export PATH=$PATH:${CWPROOT}/bin
 
 # MPICH
 export PATH=/usr/lib64/mpich/bin:${PATH}
 module load mpi/mpich-x86_64
+
+#OPENMP
+#export PATH=/usr/lib64/openmpi/bin:${PATH}
+#module load mpi/openmpi-x86_64
 
