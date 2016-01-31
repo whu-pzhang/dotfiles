@@ -80,3 +80,6 @@ module load mpi/mpich-x86_64
 #export PATH=/usr/lib64/openmpi/bin:${PATH}
 #module load mpi/openmpi-x86_64
 
+# fdelmodc
+export PATH=${HOME}/OpenSource/bin:${PATH}
+
