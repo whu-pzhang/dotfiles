@@ -10,6 +10,7 @@ fi
 
 # User specific aliases and functions
 alias vi=vim
+#alias rm="rm -i"
 
 # FC
 export FC="gfortran -ffixed-line-length-none"
@@ -30,6 +31,9 @@ export PATH=${TAUPHOME}/bin:${PATH}
 export GMT4HOME=/opt/GMT-4.5.14
 export PATH=${GMT4HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
+
+# SOD
+export PATH=${PATH}:/opt/sod-3.2.6/bin
 
 # GMT4.0
 #export GMT4HOME=/opt/GMT4.0
@@ -82,4 +86,10 @@ module load mpi/mpich-x86_64
 
 # fdelmodc
 export PATH=${HOME}/OpenSource/bin:${PATH}
+
+# intel
+#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
+#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
+#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
+#source /opt/intel/bin/compilervars.sh intel64
 

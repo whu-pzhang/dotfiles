@@ -52,6 +52,8 @@ ZSH_THEME="random"
 plugins=(sudo pip autojump)
 
 # User configuration
+export CWPROOT=$HOME/cwp
+export PATH=${PATH}:${CWPROOT}/bin
 
   export PATH="/home/pzhang/OpenSource/bin:/usr/lib64/mpich/bin:/opt/matlab2009b/bin:/home/pzhang/Src/gcap:/home/pzhang/bin:/home/pzhang/Src/Shells:/home/pzhang/RF/scripts:/opt/PROGRAMS.330/bin:/usr/local/texlive/2015/bin/x86_64-linux:/home/pzhang/.pyenv/shims:/home/pzhang/.pyenv/bin:/opt/GMT-5.2.1/bin:/opt/GMT-4.5.14/bin:/opt/TauP-2.1.2/bin:/opt/sac/bin:/usr/lib64/mpich/bin:/opt/matlab2009b/bin:/home/pzhang/Src/gcap:/home/pzhang/bin:/home/pzhang/Src/Shells:/home/pzhang/RF/scripts:/opt/PROGRAMS.330/bin:/usr/local/texlive/2015/bin/x86_64-linux:/home/pzhang/.pyenv/shims:/home/pzhang/.pyenv/bin:/opt/GMT-5.2.1/bin:/opt/GMT-4.5.14/bin:/opt/TauP-2.1.2/bin:/opt/sac/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/pzhang/cwp/bin:/home/pzhang/.local/bin:/home/pzhang/bin:/home/pzhang/cwp/bin"
 # export MANPATH="/usr/local/man:$MANPATH"

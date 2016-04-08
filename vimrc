@@ -22,8 +22,8 @@ filetype plugin indent on    " required
 " Solarized Color Scheme
 syntax on	" 语法高亮
 let g:solarized_termcolors=16
-set background=dark
-colorscheme solarized
+set background=light
+"colorscheme solarized
 
 " Powerline
 set t_Co=16
