@@ -70,10 +70,10 @@ export NR_BIN=${MY_BIN}
 export PATH=${HOME}/Src/gcap:${PATH}
 
 # Matlab
-export PATH=/opt/matlab2009b/bin:${PATH}
+export PATH=/opt/MATLAB/R2015b/bin:${PATH}
 
 # CWP
-export CWPROOT=$HOME/cwp
+export CWPROOT=$HOME/seisCode/cwp
 export PATH=$PATH:${CWPROOT}/bin
 
 # MPICH
@@ -85,11 +85,29 @@ module load mpi/mpich-x86_64
 #module load mpi/openmpi-x86_64
 
 # fdelmodc
-export PATH=${HOME}/OpenSource/bin:${PATH}
+export PATH=${HOME}/seisCode/OpenSource/bin:${PATH}
 
 # intel
-#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-#source /opt/intel/bin/compilervars.sh intel64
+source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
+source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
+source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
+source /opt/intel/bin/compilervars.sh intel64
+
+#SPECFEM 3D
+ulimit -S -s unlimited
+
+# SEPlib
+export SEPROOT=/home/pzhang/seisCode/seplib
+export SEPINC=${SEPROOT}/include
+export PATH=${PATH}:${SEPROOT}/bin
+export DATAPATH=$HOME/tmpData/
+#if [ -n "$PYTHONPATH" ]; then
+#    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
+#else
+    export PYTHONPATH=$SEPROOT/lib/python
+#fi
+
+
+# Madagascar
+source /home/pzhang/seisCode/rsf/share/madagascar/etc/env.sh
 

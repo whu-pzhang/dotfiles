@@ -89,7 +89,13 @@ set backspace=indent,eol,start
 
 set encoding=utf-8          " 新文件默认编码
 
+let fortran_free_source=1
+let fortran_have_tabs=1
+let fortran_more_precise=1
+let fortran_do_enddo=1
+
 " 自动判断编码时，依次尝试以下编码：
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 autocmd! bufwritepost .vimrc source %   " vimrc文件修改之后自动加载
 autocmd BufWritePre * :%s/\s\+$//e      " 自动删除行尾空格
+au BufRead,BufNewFile SConstruct set filetype=python
