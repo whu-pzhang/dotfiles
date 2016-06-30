@@ -28,9 +28,9 @@ export TAUPHOME=/opt/TauP-2.1.2
 export PATH=${TAUPHOME}/bin:${PATH}
 
 # GMT4
-export GMT4HOME=/opt/GMT-4.5.14
-export PATH=${GMT4HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
+#export GMT4HOME=/opt/GMT-4.5.14
+#export PATH=${GMT4HOME}/bin:${PATH}
+#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
 # SOD
 export PATH=${PATH}:/opt/sod-3.2.6/bin

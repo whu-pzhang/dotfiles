@@ -5,7 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,8 +52,6 @@ ZSH_THEME="ys"
 plugins=(sudo pip autojump)
 
 # User configuration
-export CWPROOT=$HOME/cwp
-export PATH=${PATH}:${CWPROOT}/bin
 
 #  export PATH="/home/pzhang/OpenSource/bin:/usr/lib64/mpich/bin:/opt/matlab2009b/bin:/home/pzhang/Src/gcap:/home/pzhang/bin:/home/pzhang/Src/Shells:/home/pzhang/RF/scripts:/opt/PROGRAMS.330/bin:/usr/local/texlive/2015/bin/x86_64-linux:/home/pzhang/.pyenv/shims:/home/pzhang/.pyenv/bin:/opt/GMT-5.2.1/bin:/opt/GMT-4.5.14/bin:/opt/TauP-2.1.2/bin:/opt/sac/bin:/usr/lib64/mpich/bin:/opt/matlab2009b/bin:/home/pzhang/Src/gcap:/home/pzhang/bin:/home/pzhang/Src/Shells:/home/pzhang/RF/scripts:/opt/PROGRAMS.330/bin:/usr/local/texlive/2015/bin/x86_64-linux:/home/pzhang/.pyenv/shims:/home/pzhang/.pyenv/bin:/opt/GMT-5.2.1/bin:/opt/GMT-4.5.14/bin:/opt/TauP-2.1.2/bin:/opt/sac/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/pzhang/cwp/bin:/home/pzhang/.local/bin:/home/pzhang/bin:/home/pzhang/cwp/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -165,13 +163,11 @@ module load mpi/mpich-x86_64
 export PATH=${HOME}/seisCode/OpenSource/bin:${PATH}
 
 # intel
-source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-source /opt/intel/bin/compilervars.sh intel64
+#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
+#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
+#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
+#source /opt/intel/bin/compilervars.sh intel64
 
-#SPECFEM 3D
-ulimit -S -s unlimited
 
 # SEPlib
 export SEPROOT=/home/pzhang/seisCode/seplib
@@ -187,7 +183,11 @@ export DATAPATH=$HOME/tmpData/
 
 # Madagascar
 source /home/pzhang/seisCode/rsf/share/madagascar/etc/env.sh
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib64
 
 
 export NVM_DIR="/home/pzhang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PGPLOT_DIR=/usr/local/pgplot
+export PGPLOT_DEV=/Xserve
