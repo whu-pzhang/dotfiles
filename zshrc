@@ -189,5 +189,7 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib64
 export NVM_DIR="/home/pzhang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PGPLOT_DIR=/usr/local/pgplot
-export PGPLOT_DEV=/Xserve
+
+# hypoDD
+export PATH=${PATH}:$HOME/seisCode/HYPODD/bin
+
