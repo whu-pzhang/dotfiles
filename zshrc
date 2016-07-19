@@ -103,7 +103,7 @@ export TAUPHOME=/opt/TauP-2.1.2
 export PATH=${TAUPHOME}/bin:${PATH}
 
 # GMT4
-export GMT4HOME=/opt/GMT-4.5.14
+export GMT4HOME=/home/pzhang/seisCode/GMT-4.5.14
 export PATH=${GMT4HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
@@ -124,10 +124,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# TeXLive 2015
-export PATH=/usr/local/texlive/2015/bin/x86_64-linux:${PATH}
-export INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info:${INFOPATH}
-export MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man:${MANPATH}
+# TeXLive 2016
+export PATH=/opt/texlive/2016/bin/x86_64-linux:${PATH}
+export INFOPATH=/opt/texlive/2016/texmf-dist/doc/info:${INFOPATH}
+export MANPATH=/opt/texlive/2016/texmf-dist/doc/man:${MANPATH}
 
 # CPS
 export PATH=/opt/PROGRAMS.330/bin:${PATH}
@@ -192,4 +192,7 @@ export NVM_DIR="/home/pzhang/.nvm"
 
 # hypoDD
 export PATH=${PATH}:$HOME/seisCode/HYPODD/bin
+
+# thefuck
+eval "$(thefuck --alias)"
 
