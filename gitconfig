@@ -8,3 +8,5 @@
 	br = branch
 [push]
 	default = simple
+[colo]
+	ui = true
