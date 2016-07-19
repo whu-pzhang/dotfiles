@@ -14,6 +14,9 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
+" Markdown plugins
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -21,9 +24,9 @@ filetype plugin indent on    " required
 
 " Solarized Color Scheme
 syntax on	" 语法高亮
-let g:solarized_termcolors=16
-set background=light
-"colorscheme solarized
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " Powerline
 set t_Co=16
@@ -98,4 +101,4 @@ let fortran_do_enddo=1
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 autocmd! bufwritepost .vimrc source %   " vimrc文件修改之后自动加载
 autocmd BufWritePre * :%s/\s\+$//e      " 自动删除行尾空格
-au BufRead,BufNewFile SConstruct set filetype=python
+au BufRead,BufNewFile SConstruct set filetype=python " SConstruct文件以Python语法高亮显示
