@@ -8,6 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -22,14 +23,24 @@ Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf='~/dotfiles/ycm_extra_conf.py'
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_filetype_blacklist = {
+    \ 'tex' : 1,
+    \ 'rst' : 1,
+\}
+
+
 " Solarized Color Scheme
+set t_Co=16
 syntax on	" 语法高亮
 let g:solarized_termcolors=256
-set background=dark
+set background=light
 colorscheme solarized
 
 " Powerline
-set t_Co=16
 set laststatus=2	" 显示状态栏
 set noshowmode		" 不显示模式栏
 let g:Powerline_colorscheme='solarized256'
