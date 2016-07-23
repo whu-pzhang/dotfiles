@@ -91,7 +91,7 @@ alias vi=vim
 export FC="gfortran -ffixed-line-length-none"
 
 # SAC
-export SACHOME=/opt/sac
+export SACHOME=/home/pzhang/seisCode/sac
 export SACAUX=$SACHOME/aux
 export SAC_DISPLAY_COPYRIGHT=1
 export SAC_PPK_LARGE_CROSSHAIRS=1
