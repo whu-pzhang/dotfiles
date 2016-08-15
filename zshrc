@@ -86,6 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # User specific aliases and functions
 alias vi=vim
 #alias rm="rm -i"
+alias time="/usr/bin/time -p"
 
 # FC
 export FC="gfortran -ffixed-line-length-none"
@@ -103,7 +104,7 @@ export TAUPHOME=/opt/TauP-2.1.2
 export PATH=${TAUPHOME}/bin:${PATH}
 
 # GMT4
-export GMT4HOME=/home/pzhang/seisCode/GMT-4.5.14
+export GMT4HOME=/opt/GMT-4.5.14
 export PATH=${GMT4HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
