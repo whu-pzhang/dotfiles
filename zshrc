@@ -88,11 +88,13 @@ alias vi=vim
 #alias rm="rm -i"
 alias time="/usr/bin/time -p"
 
+ulimit -S -s unlimited
+
 # FC
 export FC="gfortran -ffixed-line-length-none"
 
 # SAC
-export SACHOME=/home/pzhang/seisCode/sac
+export SACHOME=/opt/sac
 export SACAUX=$SACHOME/aux
 export SAC_DISPLAY_COPYRIGHT=1
 export SAC_PPK_LARGE_CROSSHAIRS=1
@@ -134,22 +136,27 @@ export MANPATH=/opt/texlive/2016/texmf-dist/doc/man:${MANPATH}
 export PATH=/opt/PROGRAMS.330/bin:${PATH}
 
 # ZhuLP RF
-export RFSCRIPTS=${HOME}/RF/scripts
+export SCRIPTHOME=${HOME}/Script
+export RFSCRIPTS=${SCRIPTHOME}/hk/RF/scripts
 export PATH=${RFSCRIPTS}:${PATH}
-export PATH=${HOME}/Src/Shells:${PATH}
-export MY_BIN=${HOME}/bin
-export PATH=${MY_BIN}:${PATH}
+export PATH=${HOME}/src.import/hk/Src/Shells:${PATH}
+export HKBINDIR=${HOME}/src.import/hk/bin
+export PATH=${HKBINDIR}:${PATH}
 export IASP91_TBL=${MY_BIN}/iasp91
 export NR=${HOME}/src.import/Numerical_Recipes
-export NR_BIN=${MY_BIN}
+
+export MY_BIN=${HOME}/bin
+export PATH=${MY_BIN}:${PATH}
+
+
 # GCAP
-export PATH=${HOME}/Src/gcap:${PATH}
+#export PATH=${HOME}/Src/gcap:${PATH}
 
 # Matlab
 export PATH=/opt/MATLAB/R2015b/bin:${PATH}
 
 # CWP
-export CWPROOT=$HOME/seisCode/cwp
+export CWPROOT=$HOME/src.import/cwp
 export PATH=$PATH:${CWPROOT}/bin
 
 # MPICH
@@ -161,30 +168,29 @@ module load mpi/mpich-x86_64
 #module load mpi/openmpi-x86_64
 
 # fdelmodc
-export PATH=${HOME}/seisCode/OpenSource/bin:${PATH}
+export PATH=${HOME}/src.import/fdelmodc/bin:${PATH}
 
 # intel
-#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-#source /opt/intel/bin/compilervars.sh intel64
+source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
+source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
+source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
+source /opt/intel/bin/compilervars.sh intel64
 
 
 # SEPlib
-export SEPROOT=/home/pzhang/seisCode/seplib
+export SEPROOT=/home/pzhang/src.import/seplib
 export SEPINC=${SEPROOT}/include
 export PATH=${PATH}:${SEPROOT}/bin
-export DATAPATH=$HOME/tmpData/
-#if [ -n "$PYTHONPATH" ]; then
-#    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
-#else
+export DATAPATH=/var/tmp/
+if [ -n "$PYTHONPATH" ]; then
+    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
+else
     export PYTHONPATH=$SEPROOT/lib/python
-#fi
+fi
 
 
 # Madagascar
-source /home/pzhang/seisCode/rsf/share/madagascar/etc/env.sh
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib64
+source /home/pzhang/src.import/rsf/share/madagascar/etc/env.sh
 
 
 export NVM_DIR="/home/pzhang/.nvm"
@@ -192,7 +198,7 @@ export NVM_DIR="/home/pzhang/.nvm"
 
 
 # hypoDD
-export PATH=${PATH}:$HOME/seisCode/HYPODD/bin
+export PATH=${PATH}:$HOME/src.import/HYPODD/bin
 
 # thefuck
 eval "$(thefuck --alias)"

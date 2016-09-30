@@ -8,7 +8,6 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -18,27 +17,23 @@ Plugin 'Yggdroot/indentLine'
 " Markdown plugins
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+" autoformat
+Plugin 'Chiel92/vim-autoformat'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf='~/dotfiles/ycm_extra_conf.py'
-let g:ycm_server_use_vim_stdout = 1
-let g:ycm_server_log_level = 'debug'
-let g:ycm_filetype_blacklist = {
-    \ 'tex' : 1,
-    \ 'rst' : 1,
-\}
 
 
 " Solarized Color Scheme
-set t_Co=16
-syntax on	" 语法高亮
+"set t_Co=16
+syntax enable	" 语法高亮
 let g:solarized_termcolors=256
-set background=light
-colorscheme solarized
+"set background=light
+"colorscheme solarized
 
 " Powerline
 set laststatus=2	" 显示状态栏
@@ -52,6 +47,17 @@ let g:indentLine_faster = 1
 
 let mapleader=';'
 
+" vim-autoformat配置
+noremap <F3> :Autoformat<CR>
+let g:autoformat_verbosemode=1
+let g:autoformat_remove_trailing_spaces = 0
+let g:autoformat_autoindent = 0
+let g:formatdef_autopep8 = "'autopep8 - --range '.a:firstline.' '.a:lastline"
+let g:formatters_python = ['autopep8']
+let g:formatdef_astyle = '"astyle --style=kr --pad-oper"'
+let g:formatters_c = ['astyle']
+autocmd FileType vim,tex let b:autoformat_autoindent=0
+
 "   显示相关
 set shortmess=atI           " 启动时不显示援助乌干达儿童
 set number                  " 显示行号
@@ -59,7 +65,8 @@ set relativenumber          " 显示相对行号
 set ruler                   " 显示光标位置
 set cursorline              " 突出显示当前行
 set showcmd                 " 状态栏右下角显示当前命令
-set colorcolumn=73          " 第81列彩色显示
+set colorcolumn=81          " 第81列彩色显示
+set textwidth=80
 set nowrap                  " 禁止代码折行
 set showmatch               " 高亮显示匹配的括号
 set matchtime=1             " 匹配括号高亮的时间（0.1s）
@@ -89,6 +96,7 @@ set autoindent
 set cindent
 set smarttab
 set smartindent
+
 
 "   搜索
 set hlsearch                " 高亮搜索结果
