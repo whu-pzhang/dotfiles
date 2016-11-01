@@ -54,7 +54,7 @@ let g:autoformat_remove_trailing_spaces = 0
 let g:autoformat_autoindent = 0
 let g:formatdef_autopep8 = "'autopep8 - --range '.a:firstline.' '.a:lastline"
 let g:formatters_python = ['autopep8']
-let g:formatdef_astyle = '"astyle --style=kr --pad-oper"'
+let g:formatdef_astyle = '"astyle --style=kr"'
 let g:formatters_c = ['astyle']
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 

@@ -171,10 +171,10 @@ module load mpi/mpich-x86_64
 export PATH=${HOME}/src.import/fdelmodc/bin:${PATH}
 
 # intel
-source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-source /opt/intel/bin/compilervars.sh intel64
+#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
+#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
+#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
+#source /opt/intel/bin/compilervars.sh intel64
 
 
 # SEPlib
