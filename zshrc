@@ -126,6 +126,7 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # TeXLive 2016
 export PATH=/opt/texlive/2016/bin/x86_64-linux:${PATH}
@@ -190,7 +191,9 @@ fi
 
 
 # Madagascar
-source /home/pzhang/src.import/rsf/share/madagascar/etc/env.sh
+export RSFROOT=/home/pzhang/ProgramFiles/rsf
+source ${RSFROOT}/share/madagascar/etc/env.sh
+export DATAPATH=$HOME/tmp/
 
 
 export NVM_DIR="/home/pzhang/.nvm"

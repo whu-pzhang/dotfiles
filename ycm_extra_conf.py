@@ -45,7 +45,7 @@ flags = [
 '-DNDEBUG',
 # You 100% do NOT need -DUSE_CLANG_COMPLETER in your flags; only the YCM
 # source code needs it.
-'-DUSE_CLANG_COMPLETER',
+#'-DUSE_CLANG_COMPLETER',
 # THIS IS IMPORTANT! Without a "-std=<something>" flag, clang won't know which
 # language to use when compiling headers. So it will guess. Badly. So C++
 # headers will be compiled as C headers. You don't want that so ALWAYS specify
@@ -64,23 +64,8 @@ flags = [
 '-isystem',
 # This path will only work on OS X, but extra paths that don't exist are not
 # harmful
-'/System/Library/Frameworks/Python.framework/Headers',
-'-isystem',
-'../llvm/include',
-'-isystem',
-'../llvm/tools/clang/include',
-'-I',
-'.',
-'-I',
-'./ClangCompleter',
-'-isystem',
-'./tests/gmock/gtest',
-'-isystem',
-'./tests/gmock/gtest/include',
-'-isystem',
-'./tests/gmock',
-'-isystem',
-'./tests/gmock/include',
+'-I/usr/lib64',
+'-I/usr/include'
 ]
 
 

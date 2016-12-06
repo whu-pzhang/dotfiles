@@ -100,7 +100,6 @@ ulimit -S -s unlimited
 export SEPROOT=/home/pzhang/seisCode/seplib
 export SEPINC=${SEPROOT}/include
 export PATH=${PATH}:${SEPROOT}/bin
-export DATAPATH=$HOME/tmpData/
 #if [ -n "$PYTHONPATH" ]; then
 #    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
 #else
@@ -110,4 +109,5 @@ export DATAPATH=$HOME/tmpData/
 
 # Madagascar
 source /home/pzhang/seisCode/rsf/share/madagascar/etc/env.sh
+export DATAPATH=$HOME/tmp/
 

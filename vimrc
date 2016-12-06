@@ -8,6 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -26,6 +27,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " YouCompleteMe
+let g:ycm_global_ycm_extra_conf='~/.tcm_extra_conf.py'
 
 
 " Solarized Color Scheme
@@ -39,6 +41,7 @@ let g:solarized_termcolors=256
 set laststatus=2	" 显示状态栏
 set noshowmode		" 不显示模式栏
 let g:Powerline_colorscheme='solarized256'
+let g:Powerline_symbols = 'fancy'
 
 " indentLine
 let g:indentLine_char='¦'
@@ -73,7 +76,7 @@ set matchtime=1             " 匹配括号高亮的时间（0.1s）
 
 " GUI
 " 禁止显示滚动条
-set guifont=Source\ Code\ Pro\ Medium\ 12
+set guifont=Monaco\ 14
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
