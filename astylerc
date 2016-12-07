@@ -1,0 +1,28 @@
+#
+--style=kr
+
+# 缩进4个空格
+--indent=spaces=4
+
+# 括号选项
+--attach-namespaces
+--attach-extern-c
+################################
+# Padding options
+--break-blocks
+#
+--pad-oper
+#
+--pad-header
+#
+--delete-empty-lines
+#
+--align-pointer=name
+--align-reference=name
+##################
+# 格式化选项
+--keep-one-line-blocks
+#
+--keep-one-line-statements
+#
+--break-after-logical
