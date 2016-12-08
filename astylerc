@@ -15,7 +15,7 @@
 #
 --pad-header
 #
---delete-empty-lines
+#--delete-empty-lines
 #
 --align-pointer=name
 --align-reference=name

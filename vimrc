@@ -9,7 +9,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -47,8 +46,8 @@ let g:NERDSpaceDelims = 1
 "set t_Co=16
 syntax enable	" 语法高亮
 let g:solarized_termcolors=256
-"set background=light
-"colorscheme solarized
+" set background=light
+" colorscheme solarized
 
 " Powerline
 set laststatus=2	" 显示状态栏
