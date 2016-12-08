@@ -110,9 +110,6 @@ export GMT4HOME=/opt/GMT-4.5.14
 export PATH=${GMT4HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
-# SOD
-export PATH=${PATH}:/opt/sod-3.2.6/bin
-
 # GMT4.0
 #export GMT4HOME=/opt/GMT4.0
 #export PATH=${GMT4HOME}/bin:${PATH}
@@ -133,28 +130,10 @@ export PATH=/opt/texlive/2016/bin/x86_64-linux:${PATH}
 export INFOPATH=/opt/texlive/2016/texmf-dist/doc/info:${INFOPATH}
 export MANPATH=/opt/texlive/2016/texmf-dist/doc/man:${MANPATH}
 
-# CPS
-export PATH=/opt/PROGRAMS.330/bin:${PATH}
-
-# ZhuLP RF
-export SCRIPTHOME=${HOME}/Script
-export RFSCRIPTS=${SCRIPTHOME}/hk/RF/scripts
-export PATH=${RFSCRIPTS}:${PATH}
-export PATH=${HOME}/src.import/hk/Src/Shells:${PATH}
-export HKBINDIR=${HOME}/src.import/hk/bin
-export PATH=${HKBINDIR}:${PATH}
-export IASP91_TBL=${MY_BIN}/iasp91
-export NR=${HOME}/src.import/Numerical_Recipes
-
-export MY_BIN=${HOME}/bin
-export PATH=${MY_BIN}:${PATH}
-
 
 # GCAP
 #export PATH=${HOME}/Src/gcap:${PATH}
 
-# Matlab
-export PATH=/opt/MATLAB/R2015b/bin:${PATH}
 
 # CWP
 export CWPROOT=$HOME/src.import/cwp
@@ -168,26 +147,12 @@ module load mpi/mpich-x86_64
 #export PATH=/usr/lib64/openmpi/bin:${PATH}
 #module load mpi/openmpi-x86_64
 
-# fdelmodc
-export PATH=${HOME}/src.import/fdelmodc/bin:${PATH}
 
 # intel
 #source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
 #source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
 #source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
 #source /opt/intel/bin/compilervars.sh intel64
-
-
-# SEPlib
-export SEPROOT=/home/pzhang/src.import/seplib
-export SEPINC=${SEPROOT}/include
-export PATH=${PATH}:${SEPROOT}/bin
-export DATAPATH=/var/tmp/
-if [ -n "$PYTHONPATH" ]; then
-    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
-else
-    export PYTHONPATH=$SEPROOT/lib/python
-fi
 
 
 # Madagascar
@@ -198,9 +163,6 @@ export DATAPATH=$HOME/tmp/
 export NVM_DIR="/home/pzhang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-
-# hypoDD
-export PATH=${PATH}:$HOME/src.import/HYPODD/bin
 
 # thefuck
 eval "$(thefuck --alias)"
