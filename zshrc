@@ -195,7 +195,6 @@ export RSFROOT=/home/pzhang/ProgramFiles/rsf
 source ${RSFROOT}/share/madagascar/etc/env.sh
 export DATAPATH=$HOME/tmp/
 
-
 export NVM_DIR="/home/pzhang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

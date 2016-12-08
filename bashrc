@@ -110,4 +110,3 @@ export PATH=${PATH}:${SEPROOT}/bin
 # Madagascar
 source /home/pzhang/seisCode/rsf/share/madagascar/etc/env.sh
 export DATAPATH=$HOME/tmp/
-
