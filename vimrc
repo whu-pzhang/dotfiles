@@ -28,6 +28,8 @@ Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let mapleader=';'
+
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -38,6 +40,8 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_min_num_of_chars_for_completion=2
 "补全后自动关机预览窗口"
 let g:ycm_autoclose_preview_window_after_completion=1
+
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " NERD Commenter
 let g:NERDSpaceDelims = 1
@@ -60,7 +64,6 @@ let g:indentLine_char='¦'
 let g:indentLine_color_term=200
 let g:indentLine_faster = 1
 
-let mapleader=';'
 
 " vim-autoformat配置
 noremap <F3> :Autoformat<CR>

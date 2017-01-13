@@ -9,7 +9,7 @@
 --attach-extern-c
 ################################
 # Padding options
---break-blocks
+#--break-blocks
 #
 --pad-oper
 #

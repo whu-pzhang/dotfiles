@@ -157,7 +157,7 @@ export PATH=${MY_BIN}:${PATH}
 export PATH=/opt/MATLAB/R2015b/bin:${PATH}
 
 # CWP
-export CWPROOT=$HOME/src.import/cwp
+export CWPROOT=$HOME/ProgramFiles/cwp
 export PATH=$PATH:${CWPROOT}/bin
 
 # MPICH
@@ -179,19 +179,19 @@ export PATH=${HOME}/src.import/fdelmodc/bin:${PATH}
 
 
 # SEPlib
-export SEPROOT=/home/pzhang/src.import/seplib
-export SEPINC=${SEPROOT}/include
-export PATH=${PATH}:${SEPROOT}/bin
-export DATAPATH=/var/tmp/
-if [ -n "$PYTHONPATH" ]; then
-    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
-else
-    export PYTHONPATH=$SEPROOT/lib/python
-fi
+#export SEPROOT=/home/pzhang/src.import/seplib
+#export SEPINC=${SEPROOT}/include
+#export PATH=${PATH}:${SEPROOT}/bin
+#export DATAPATH=/var/tmp/
+#if [ -n "$PYTHONPATH" ]; then
+#    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
+#else
+#    export PYTHONPATH=$SEPROOT/lib/python
+#fi
 
 
 # Madagascar
-export RSFROOT=/home/pzhang/ProgramFiles/rsf
+export RSFROOT=/opt/rsf
 source ${RSFROOT}/share/madagascar/etc/env.sh
 export DATAPATH=$HOME/tmp/
 

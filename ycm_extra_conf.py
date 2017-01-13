@@ -69,6 +69,8 @@ flags = [
 # harmful
 '-I',
 '.',
+'-I',
+'/home/pzhang/ProgramFiles/rsf/include'
 ]
 
 
