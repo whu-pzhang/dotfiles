@@ -156,7 +156,7 @@ module load mpi/mpich-x86_64
 
 
 # Madagascar
-export RSFROOT=/home/pzhang/ProgramFiles/rsf
+export RSFROOT=/opt/rsf
 source ${RSFROOT}/share/madagascar/etc/env.sh
 export DATAPATH=$HOME/tmp/
 
