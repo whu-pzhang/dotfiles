@@ -106,9 +106,9 @@ export TAUPHOME=/opt/TauP-2.1.2
 export PATH=${TAUPHOME}/bin:${PATH}
 
 # GMT4
-export GMT4HOME=/opt/GMT-4.5.14
-export PATH=${GMT4HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
+#export GMT4HOME=/opt/GMT-4.5.14
+#export PATH=${GMT4HOME}/bin:${PATH}
+#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
 # SOD
 export PATH=${PATH}:/opt/sod-3.2.6/bin
@@ -157,7 +157,7 @@ export PATH=${MY_BIN}:${PATH}
 export PATH=/opt/MATLAB/R2015b/bin:${PATH}
 
 # CWP
-export CWPROOT=$HOME/ProgramFiles/cwp
+export CWPROOT=/opt/cwp
 export PATH=$PATH:${CWPROOT}/bin
 
 # MPICH
@@ -169,31 +169,29 @@ module load mpi/mpich-x86_64
 #module load mpi/openmpi-x86_64
 
 # fdelmodc
-export PATH=${HOME}/src.import/fdelmodc/bin:${PATH}
+export PATH=${HOME}/ProgramFiles/OpenSource/bin:${PATH}
 
 # intel
-#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-#source /opt/intel/bin/compilervars.sh intel64
+source /opt/intel/vtune_amplifier_xe/amplxe-vars.sh quit
+source /opt/intel/inspector/inspxe-vars.sh quiet
+source /opt/intel/advisor/advixe-vars.sh quiet
+source /opt/intel/bin/compilervars.sh intel64
 
 
 # SEPlib
-#export SEPROOT=/home/pzhang/src.import/seplib
-#export SEPINC=${SEPROOT}/include
-#export PATH=${PATH}:${SEPROOT}/bin
-#export DATAPATH=/var/tmp/
-#if [ -n "$PYTHONPATH" ]; then
-#    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
-#else
-#    export PYTHONPATH=$SEPROOT/lib/python
-#fi
+export SEPROOT=$HOME/ProgramFiles/seplib
+export SEPINC=${SEPROOT}/include
+export PATH=${PATH}:${SEPROOT}/bin
+if [ -n "$PYTHONPATH" ]; then
+    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
+else
+    export PYTHONPATH=$SEPROOT/lib/python
+fi
 
 
 # Madagascar
 export RSFROOT=/opt/rsf
 source ${RSFROOT}/share/madagascar/etc/env.sh
-export DATAPATH=$HOME/tmp/
 
 export NVM_DIR="/home/pzhang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -204,4 +202,11 @@ export PATH=${PATH}:$HOME/src.import/HYPODD/bin
 
 # thefuck
 eval "$(thefuck --alias)"
+
+
+# Marp
+export PATH=${PATH}:/opt/Marp
+
+# Julia
+export JULIA_LOAD_PATH=${JULIA_LOAD_PATH}:$RSFROOT/lib
 

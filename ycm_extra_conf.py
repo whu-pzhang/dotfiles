@@ -61,8 +61,10 @@ flags = [
 'c',
 '-isystem',
 '/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include',
+
 '-isystem',
 '/usr/local/include',
+
 '-isystem',
 '/usr/include',
 # This path will only work on OS X, but extra paths that don't exist are not
@@ -70,7 +72,7 @@ flags = [
 '-I',
 '.',
 '-I',
-'/home/pzhang/ProgramFiles/rsf/include'
+'/opt/rsf/include'
 ]
 
 

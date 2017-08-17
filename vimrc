@@ -22,6 +22,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Chiel92/vim-autoformat'
 " NERD Commenter
 Plugin 'scrooloose/nerdcommenter'
+" Julia lang support
+Plugin 'JuliaEditorSupport/julia-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -74,8 +76,8 @@ let g:formatdef_autopep8 = "'autopep8 - --range '.a:firstline.' '.a:lastline"
 let g:formatters_python = ['autopep8']
 let g:formatdef_astyle_c = '"astyle --mode=c --style=kr --pad-oper"'
 let g:formatters_c = ['astyle_c']
-let g:formatdef_astyle_cpp = '"astyle --options=/home/pzhang/.astylerc"'
-let g:formatters_cpp = ['astyle_cpp']
+let g:formatdef_format_cpp = '/home/pzhang/.vscode/extensions/ms-vscode.cpptools-0.11.4/LLVM/bin/clang-format'
+let g:formatters_cpp = ['format_cpp']
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 
 "   显示相关
