@@ -150,9 +150,6 @@ export MY_BIN=${HOME}/bin
 export PATH=${MY_BIN}:${PATH}
 
 
-# GCAP
-#export PATH=${HOME}/Src/gcap:${PATH}
-
 # Matlab
 export PATH=/opt/MATLAB/R2015b/bin:${PATH}
 
@@ -177,16 +174,8 @@ source /opt/intel/inspector/inspxe-vars.sh quiet
 source /opt/intel/advisor/advixe-vars.sh quiet
 source /opt/intel/bin/compilervars.sh intel64
 
-
-# SEPlib
-export SEPROOT=$HOME/ProgramFiles/seplib
-export SEPINC=${SEPROOT}/include
-export PATH=${PATH}:${SEPROOT}/bin
-if [ -n "$PYTHONPATH" ]; then
-    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
-else
-    export PYTHONPATH=$SEPROOT/lib/python
-fi
+# GSL
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 
 # Madagascar
@@ -197,15 +186,9 @@ export NVM_DIR="/home/pzhang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
-# hypoDD
-export PATH=${PATH}:$HOME/src.import/HYPODD/bin
-
 # thefuck
 eval "$(thefuck --alias)"
 
-
-# Marp
-export PATH=${PATH}:/opt/Marp
 
 # Julia
 export JULIA_LOAD_PATH=${JULIA_LOAD_PATH}:$RSFROOT/lib
