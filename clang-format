@@ -1,0 +1,26 @@
+#在llvm的配置基础上加定制配置
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+
+# 配置花括号的换行标准
+# Attach：任何时候都不换行;
+# Allman：任何时候始终换行；
+# Stroustrup: 只在function和else处换行；
+# Linux:只在function、namespace、class的时候换行；
+# GNU：始终换行，并在控制块添加一个额外的缩进，但在class、function、definitions的时候不换行；（规范）
+BreakBeforeBraces: Linux
+
+AllowShortIfStatementsOnASingleLine: true
+
+# SFS_None: Never merge
+# SFS_Empty: Only merge empty functions
+# SFS_Inline: Only merge functions inside a class
+# SFS_All: merge all fucntions
+AllowShortFunctionsOnASingleLine: Inline
+
+SortIncludes: false
+
+#
+AlwaysBreakTemplateDeclarations: true
+

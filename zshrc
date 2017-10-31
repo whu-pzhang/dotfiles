@@ -1,11 +1,14 @@
-# Path to your oh-my-zsh installation.
-  export ZSH=/home/pzhang/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/pzhang/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,14 +52,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo pip autojump)
+plugins=(sudo autojump)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-#  export PATH="/home/pzhang/OpenSource/bin:/usr/lib64/mpich/bin:/opt/matlab2009b/bin:/home/pzhang/Src/gcap:/home/pzhang/bin:/home/pzhang/Src/Shells:/home/pzhang/RF/scripts:/opt/PROGRAMS.330/bin:/usr/local/texlive/2015/bin/x86_64-linux:/home/pzhang/.pyenv/shims:/home/pzhang/.pyenv/bin:/opt/GMT-5.2.1/bin:/opt/GMT-4.5.14/bin:/opt/TauP-2.1.2/bin:/opt/sac/bin:/usr/lib64/mpich/bin:/opt/matlab2009b/bin:/home/pzhang/Src/gcap:/home/pzhang/bin:/home/pzhang/Src/Shells:/home/pzhang/RF/scripts:/opt/PROGRAMS.330/bin:/usr/local/texlive/2015/bin/x86_64-linux:/home/pzhang/.pyenv/shims:/home/pzhang/.pyenv/bin:/opt/GMT-5.2.1/bin:/opt/GMT-4.5.14/bin:/opt/TauP-2.1.2/bin:/opt/sac/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/pzhang/cwp/bin:/home/pzhang/.local/bin:/home/pzhang/bin:/home/pzhang/cwp/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -72,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -82,88 +84,26 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# User specific aliases and functions
 alias vi=vim
-#alias rm="rm -i"
-alias time="/usr/bin/time -p"
+alias typora="open -a typora"
 
-ulimit -S -s unlimited
-
-# FC
-export FC="gfortran -ffixed-line-length-none"
-
-# SAC
-export SACHOME=/opt/sac
-export SACAUX=$SACHOME/aux
-export SAC_DISPLAY_COPYRIGHT=1
-export SAC_PPK_LARGE_CROSSHAIRS=1
-export SAC_USE_DATABASE=0
-export PATH=$SACHOME/bin:$PATH
-
-# TauP
-export TAUPHOME=/opt/TauP-2.1.2
-export PATH=${TAUPHOME}/bin:${PATH}
-
-# GMT4
-export GMT4HOME=/opt/GMT-4.5.14
-export PATH=${GMT4HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
-
-# GMT4.0
-#export GMT4HOME=/opt/GMT4.0
-#export PATH=${GMT4HOME}/bin:${PATH}
-
-# GMT5
-export GMT5HOME=/opt/GMT-5.2.1
-export PATH=${GMT5HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
+export OMP_NUM_THREADS=4
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH=$PATH:$PYENV_ROOT/bin
 eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-
-# TeXLive 2016
-export PATH=/opt/texlive/2016/bin/x86_64-linux:${PATH}
-export INFOPATH=/opt/texlive/2016/texmf-dist/doc/info:${INFOPATH}
-export MANPATH=/opt/texlive/2016/texmf-dist/doc/man:${MANPATH}
-
-
-# GCAP
-#export PATH=${HOME}/Src/gcap:${PATH}
-
-
-# CWP
-export CWPROOT=$HOME/src.import/cwp
-export PATH=$PATH:${CWPROOT}/bin
-
-# MPICH
-export PATH=/usr/lib64/mpich/bin:${PATH}
-module load mpi/mpich-x86_64
-
-#OPENMP
-#export PATH=/usr/lib64/openmpi/bin:${PATH}
-#module load mpi/openmpi-x86_64
-
-
-# intel
-#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-#source /opt/intel/bin/compilervars.sh intel64
-
 
 # Madagascar
 export RSFROOT=/opt/rsf
-source ${RSFROOT}/share/madagascar/etc/env.sh
-export DATAPATH=$HOME/tmp/
+source $RSFROOT/share/madagascar/etc/env.sh
 
-export NVM_DIR="/home/pzhang/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Seismic Unix
+export CWPROOT=/opt/cwp
+export PATH=${PATH}:$CWPROOT/bin
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
-# thefuck
-eval "$(thefuck --alias)"
 
