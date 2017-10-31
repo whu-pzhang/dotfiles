@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 alias vi=vim
 #alias rm="rm -i"
 alias time="/usr/bin/time -p"
+alias clang-format=clang-format-4.0
 
 ulimit -S -s unlimited
 
@@ -94,16 +95,16 @@ ulimit -S -s unlimited
 export FC="gfortran -ffixed-line-length-none"
 
 # SAC
-export SACHOME=/opt/sac
-export SACAUX=$SACHOME/aux
-export SAC_DISPLAY_COPYRIGHT=1
-export SAC_PPK_LARGE_CROSSHAIRS=1
-export SAC_USE_DATABASE=0
-export PATH=$SACHOME/bin:$PATH
-
-# TauP
-export TAUPHOME=/opt/TauP-2.1.2
-export PATH=${TAUPHOME}/bin:${PATH}
+# export SACHOME=/opt/sac
+# export SACAUX=$SACHOME/aux
+# export SAC_DISPLAY_COPYRIGHT=1
+# export SAC_PPK_LARGE_CROSSHAIRS=1
+# export SAC_USE_DATABASE=0
+# export PATH=$SACHOME/bin:$PATH
+#
+# # TauP
+# export TAUPHOME=/opt/TauP-2.1.2
+# export PATH=${TAUPHOME}/bin:${PATH}
 
 # GMT4
 #export GMT4HOME=/opt/GMT-4.5.14
@@ -111,16 +112,16 @@ export PATH=${TAUPHOME}/bin:${PATH}
 #export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
 # SOD
-export PATH=${PATH}:/opt/sod-3.2.6/bin
+# export PATH=${PATH}:/opt/sod-3.2.6/bin
 
 # GMT4.0
 #export GMT4HOME=/opt/GMT4.0
 #export PATH=${GMT4HOME}/bin:${PATH}
 
 # GMT5
-export GMT5HOME=/opt/GMT-5.2.1
-export PATH=${GMT5HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
+#export GMT5HOME=/opt/GMT-5.2.1
+#export PATH=${GMT5HOME}/bin:${PATH}
+#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -134,45 +135,39 @@ export INFOPATH=/opt/texlive/2016/texmf-dist/doc/info:${INFOPATH}
 export MANPATH=/opt/texlive/2016/texmf-dist/doc/man:${MANPATH}
 
 # CPS
-export PATH=/opt/PROGRAMS.330/bin:${PATH}
+#export PATH=/opt/PROGRAMS.330/bin:${PATH}
 
 # ZhuLP RF
-export SCRIPTHOME=${HOME}/Script
-export RFSCRIPTS=${SCRIPTHOME}/hk/RF/scripts
-export PATH=${RFSCRIPTS}:${PATH}
-export PATH=${HOME}/src.import/hk/Src/Shells:${PATH}
-export HKBINDIR=${HOME}/src.import/hk/bin
-export PATH=${HKBINDIR}:${PATH}
-export IASP91_TBL=${MY_BIN}/iasp91
-export NR=${HOME}/src.import/Numerical_Recipes
+#export SCRIPTHOME=${HOME}/Script
+#export RFSCRIPTS=${SCRIPTHOME}/hk/RF/scripts
+#export PATH=${RFSCRIPTS}:${PATH}
+#export PATH=${HOME}/src.import/hk/Src/Shells:${PATH}
+#export HKBINDIR=${HOME}/src.import/hk/bin
+#export PATH=${HKBINDIR}:${PATH}
+#export IASP91_TBL=${MY_BIN}/iasp91
+#export NR=${HOME}/src.import/Numerical_Recipes
 
 export MY_BIN=${HOME}/bin
 export PATH=${MY_BIN}:${PATH}
 
 
 # Matlab
-export PATH=/opt/MATLAB/R2015b/bin:${PATH}
+export PATH=/usr/local/MATLAB/R2015b/bin:${PATH}
 
 # CWP
 export CWPROOT=/opt/cwp
 export PATH=$PATH:${CWPROOT}/bin
 
 # MPICH
-export PATH=/usr/lib64/mpich/bin:${PATH}
-module load mpi/mpich-x86_64
+#export PATH=/usr/lib64/mpich/bin:${PATH}
+#module load mpi/mpich-x86_64
 
 #OPENMP
-#export PATH=/usr/lib64/openmpi/bin:${PATH}
-#module load mpi/openmpi-x86_64
+export PATH=/usr/lib64/openmpi/bin:${PATH}
+module load mpi/openmpi-x86_64
 
 # fdelmodc
 export PATH=${HOME}/ProgramFiles/OpenSource/bin:${PATH}
-
-# intel
-source /opt/intel/vtune_amplifier_xe/amplxe-vars.sh quit
-source /opt/intel/inspector/inspxe-vars.sh quiet
-source /opt/intel/advisor/advixe-vars.sh quiet
-source /opt/intel/bin/compilervars.sh intel64
 
 # GSL
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
@@ -193,3 +188,4 @@ eval "$(thefuck --alias)"
 # Julia
 export JULIA_LOAD_PATH=${JULIA_LOAD_PATH}:$RSFROOT/lib
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

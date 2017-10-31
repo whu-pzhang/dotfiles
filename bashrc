@@ -33,16 +33,16 @@ export PATH=${TAUPHOME}/bin:${PATH}
 #export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT4HOME}/lib
 
 # SOD
-export PATH=${PATH}:/opt/sod-3.2.6/bin
+#export PATH=${PATH}:/opt/sod-3.2.6/bin
 
 # GMT4.0
 #export GMT4HOME=/opt/GMT4.0
 #export PATH=${GMT4HOME}/bin:${PATH}
 
 # GMT5
-export GMT5HOME=/opt/GMT-5.2.1
-export PATH=${GMT5HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
+#export GMT5HOME=/opt/GMT-5.2.1
+#export PATH=${GMT5HOME}/bin:${PATH}
+#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${GMT5HOME}/lib64
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -55,19 +55,19 @@ export INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info:${INFOPATH}
 export MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man:${MANPATH}
 
 # CPS
-export PATH=/opt/PROGRAMS.330/bin:${PATH}
+#export PATH=/opt/PROGRAMS.330/bin:${PATH}
 
 # ZhuLP RF
-export RFSCRIPTS=${HOME}/RF/scripts
-export PATH=${RFSCRIPTS}:${PATH}
-export PATH=${HOME}/Src/Shells:${PATH}
-export MY_BIN=${HOME}/bin
-export PATH=${MY_BIN}:${PATH}
-export IASP91_TBL=${MY_BIN}/iasp91
-export NR=${HOME}/src.import/Numerical_Recipes
-export NR_BIN=${MY_BIN}
+#export RFSCRIPTS=${HOME}/RF/scripts
+#export PATH=${RFSCRIPTS}:${PATH}
+#export PATH=${HOME}/Src/Shells:${PATH}
+#export MY_BIN=${HOME}/bin
+#export PATH=${MY_BIN}:${PATH}
+#export IASP91_TBL=${MY_BIN}/iasp91
+#export NR=${HOME}/src.import/Numerical_Recipes
+#export NR_BIN=${MY_BIN}
 # GCAP
-export PATH=${HOME}/Src/gcap:${PATH}
+#export PATH=${HOME}/Src/gcap:${PATH}
 
 # Matlab
 export PATH=/opt/MATLAB/R2015b/bin:${PATH}
@@ -88,22 +88,22 @@ module load mpi/mpich-x86_64
 export PATH=${HOME}/seisCode/OpenSource/bin:${PATH}
 
 # intel
-source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
-source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
-source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
-source /opt/intel/bin/compilervars.sh intel64
+#source /opt/intel/vtune_amplifier_xe_2016/amplxe-vars.sh quit
+#source /opt/intel/inspector_xe_2016/inspxe-vars.sh quiet
+#source /opt/intel/advisor_xe_2016/advixe-vars.sh quiet
+#source /opt/intel/bin/compilervars.sh intel64
 
 #SPECFEM 3D
 ulimit -S -s unlimited
 
 # SEPlib
-export SEPROOT=/home/pzhang/seisCode/seplib
-export SEPINC=${SEPROOT}/include
-export PATH=${PATH}:${SEPROOT}/bin
+#export SEPROOT=/home/pzhang/seisCode/seplib
+#export SEPINC=${SEPROOT}/include
+#export PATH=${PATH}:${SEPROOT}/bin
 #if [ -n "$PYTHONPATH" ]; then
 #    export PYTHONPATH=${PYTHONPATH}:$SEPROOT/lib/python
 #else
-    export PYTHONPATH=$SEPROOT/lib/python
+#    export PYTHONPATH=$SEPROOT/lib/python
 #fi
 
 
