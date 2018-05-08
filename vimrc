@@ -8,10 +8,12 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/powerline'
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" Plugin 'Lokaltog/powerline'
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
@@ -43,17 +45,17 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:NERDSpaceDelims = 1
 
 " Solarized Color Scheme
-"set t_Co=16
+" set t_Co=16
 syntax enable	" 语法高亮
 let g:solarized_termcolors=256
-" set background=light
+"set background=dark
 " colorscheme solarized
 
 " Powerline
 set laststatus=2	" 显示状态栏
 set noshowmode		" 不显示模式栏
-let g:Powerline_colorscheme='solarized256'
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 0
+let g:airline_themes='luna'
 
 " indentLine
 let g:indentLine_char='¦'
@@ -138,4 +140,8 @@ let fortran_do_enddo=1
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 autocmd! bufwritepost .vimrc source %   " vimrc文件修改之后自动加载
 autocmd BufWritePre * :%s/\s\+$//e      " 自动删除行尾空格
+
+au BufNewFile,BufRead *.py set textwidth=79 | set expandtab | set fileformat=unix
+
 au BufRead,BufNewFile SConstruct set filetype=python " SConstruct文件以Python语法高亮显示
+
