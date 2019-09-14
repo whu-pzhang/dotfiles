@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/pzhang/.oh-my-zsh
 
@@ -5,9 +7,18 @@ export ZSH=/home/pzhang/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-POWERLEVEL9K_MODE="nerdfont-complete"
-# ZSH_THEME="robbyrussell"
+POWERLEVEL9K_MODE='nerdfont-complete'
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" "
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda dir vcs)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_STRATEGT=truncate_folders
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,6 +64,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     sudo
+    colored-man-pages
     autojump
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -94,3 +106,4 @@ source $ZSH/oh-my-zsh.sh
 #alias rm="rm -i"
 
 source ~/.bashrc
+

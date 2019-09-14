@@ -18,9 +18,29 @@ ulimit -S -s unlimited
 export FC="gfortran -ffixed-line-length-none"
 
 # added by Anaconda3 installer
-export PATH="/home/pzhang/anaconda3/bin:$PATH"
+# export PATH="/home/pzhang/miniconda3/bin:$PATH"  # commented out by conda initialize
 
 # cuda
-export CUDA_HOME="/usr/local/cuda-9.0"
+export CUDA_HOME="/usr/local/cuda"
 export PATH="$CUDA_HOME/bin:$PATH"
 export LD_LIBRARY_PATH="$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
+
+# home bin
+export PATH="$HOME/bin:$PATH"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/pzhang/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/pzhang/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/pzhang/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/pzhang/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
