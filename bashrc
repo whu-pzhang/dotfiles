@@ -17,9 +17,6 @@ ulimit -S -s unlimited
 # FC
 export FC="gfortran -ffixed-line-length-none"
 
-# added by Anaconda3 installer
-# export PATH="/home/pzhang/miniconda3/bin:$PATH"  # commented out by conda initialize
-
 # cuda
 export CUDA_HOME="/usr/local/cuda"
 export PATH="$CUDA_HOME/bin:$PATH"

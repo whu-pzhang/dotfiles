@@ -8,4 +8,5 @@ init:
 	ln -fs ${PWD}/astylerc ~/.astylerc
 	ln -fs ${PWD}/tmux.conf ~/.tmux.conf
 	ln -fs ${PWD}/clang-format ~/.clang-format
-	
+	ln -fs ${PWD}/condarc ~/.condarc
+
