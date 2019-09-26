@@ -2,6 +2,7 @@
 
 # User specific aliases and functions
 alias ls="ls --color=auto"
+alias lc=colorls
 alias vi=vim
 alias typora="open -a typora"
 alias readlink=greadlink
@@ -19,8 +20,8 @@ ulimit -S -s unlimited
 #source $RSFROOT/share/madagascar/etc/env.sh
 
 # Seismic Unix
-export CWPROOT=/opt/cwp
-export PATH="$CWPROOT/bin:$PATH"
+#export CWPROOT=/opt/cwp
+#export PATH="$CWPROOT/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -41,7 +42,24 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # coreutils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# added by Anaconda3 installer
-export PATH="/Users/pzhang/anaconda3/bin:$PATH"
+export PATH="/Users/pzhang/bin:$PATH"
+
+
+# proxy settings
+function proxy_off(){
+    unset http_proxy
+    unset https_proxy
+    echo -e "proxy closed."
+}
+
+function proxy_on(){
+    export no_proxy="localhost,127.0.0.1,localaddress.,localdomain.com"
+    export http_proxy="http://127.0.0.1:8118"
+    export https_proxy=$http_proxy
+    echo -e "proxy on."
+}
+
+
+LANG="en_US.UTF-8"
 
 
