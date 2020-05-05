@@ -2,8 +2,22 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/pzhang/.oh-my-zsh
+source /usr/local/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+# Bundles from the default repo
+antigen bundle git
+antigen bundle sudo
+antigen bundle autojump
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Load the theme.
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -71,15 +85,9 @@ POWERLEVEL9K_SHORTEN_STRATEGT=truncate_folders
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  sudo
-  autojump
-)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source $ZSH/oh-my-zsh.sh
+# Tell Antigen that you're done.
+antigen apply
 
 # User configuration
 
@@ -112,7 +120,4 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.bashrc
 source ~/.bash_profile
-
-
-
 
