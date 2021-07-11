@@ -40,9 +40,9 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -59,5 +59,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
