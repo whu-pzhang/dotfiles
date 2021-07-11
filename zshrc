@@ -37,8 +37,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda status)
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
