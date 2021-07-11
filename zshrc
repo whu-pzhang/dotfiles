@@ -44,6 +44,12 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda status)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# CUDA
+CUDA_HOME=/usr/local/cuda
+export PATH=$PATH:${CUDA_HOME}/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_HOME/lib64
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
