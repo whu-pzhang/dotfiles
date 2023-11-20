@@ -1,35 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-Plugin 'gmarik/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'altercation/vim-colors-solarized'
-" Plugin 'Lokaltog/powerline'
-" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Yggdroot/indentLine'
-" Markdown plugins
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-" autoformat
-Plugin 'Chiel92/vim-autoformat'
-" NERD Commenter
-Plugin 'scrooloose/nerdcommenter'
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
