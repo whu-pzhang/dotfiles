@@ -1,6 +1,7 @@
 [user]
 	name = whu-pzhang
 	email = pzhang@whu.edu.cn
+	signingkey = FCB836D3C350AB8C
 [alias]
 	co = checkout
 	ci = commit
@@ -10,3 +11,5 @@
 	default = simple
 [colo]
 	ui = true
+[commit]
+	gpgsign = true
