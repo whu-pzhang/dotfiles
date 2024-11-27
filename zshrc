@@ -8,6 +8,7 @@ antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
 antigen bundle autojump
+antigen bundle sudo
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -76,4 +77,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+export OMP_NUM_THREADS=2
+export MKL_NUM_THREADS=2
 
