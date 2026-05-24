@@ -8,7 +8,6 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -27,17 +26,6 @@ Plugin 'scrooloose/nerdcommenter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-" YouCompleteMe
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-"是否在注释中也开启补全"
-let g:ycm_complete_in_comments=1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-"开始补全的字符数"
-let g:ycm_min_num_of_chars_for_completion=2
-"补全后自动关机预览窗口"
-let g:ycm_autoclose_preview_window_after_completion=1
 
 " NERD Commenter
 let g:NERDSpaceDelims = 1
@@ -71,7 +59,7 @@ let g:formatdef_autopep8 = "'autopep8 - --range '.a:firstline.' '.a:lastline"
 let g:formatters_python = ['autopep8']
 let g:formatdef_astyle_c = '"astyle --mode=c --style=kr --pad-oper"'
 let g:formatters_c = ['astyle_c']
-let g:formatdef_astyle_cpp = '"astyle --options=/home/pzhang/.astylerc"'
+let g:formatdef_astyle_cpp = '"astyle --options=/home/administrator/.astylerc"'
 let g:formatters_cpp = ['astyle_cpp']
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 
