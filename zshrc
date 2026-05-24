@@ -1,4 +1,5 @@
-source ${HOME}/repos/dotfiles/antigen.zsh
+# git clone https://github.com/zsh-users/antigen.git
+source ${HOME}/repos/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -82,3 +83,10 @@ unset __conda_setup
 export OMP_NUM_THREADS=2
 export MKL_NUM_THREADS=2
 
+
+# Created by `pipx` on 2025-05-20 06:53:56
+export PATH="$PATH:/home/pzhang/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
